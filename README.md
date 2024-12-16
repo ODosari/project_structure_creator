@@ -19,8 +19,8 @@ A Python script to automatically create a directory and file structure from a te
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/project-structure-creator.git
-   cd project-structure-creator
+   git clone https://github.com/ODosari/project_structure_creator.git
+   cd project_structure_creator
    ```
 
 2. Ensure you have a text file defining the desired directory and file structure. For example:
