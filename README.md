@@ -1,13 +1,15 @@
 
 # Project Structure Creator
 
-A Python script to automatically create a directory and file structure from a text file input. This tool is especially useful for initializing complex project structures quickly and efficiently.
+A Python script to automatically create a directory and file structure from a text file input. This tool is especially useful for initializing complex project structures quickly and efficiently, including handling hidden files and directories.
 
 ## Features
 
 - Reads a text file containing a directory and file structure.
 - Creates directories and files as specified in the text file.
-- Supports nested directory and file creation.
+- Supports nested directory and file creation, including dotfiles and hidden directories.
+- Checks for write permissions before creating directories or files to avoid errors.
+- Logs actions, warnings, and errors for better traceability.
 - Skips existing directories or files to prevent overwriting.
 
 ## Requirements
@@ -30,8 +32,9 @@ A Python script to automatically create a directory and file structure from a te
    project/
    project/src/
    project/src/main.py
-   project/tests/
-   project/tests/test_main.py
+   project/.env
+   project/.git/
+   project/.git/config
    ```
 
 3. Run the script:
@@ -46,13 +49,15 @@ A Python script to automatically create a directory and file structure from a te
 
 - Lines ending with a `/` are treated as directories.
 - Lines without a `/` are treated as files.
+- Supports hidden files (e.g., `.env`) and directories (e.g., `.git/`).
 - Example structure:
   ```plaintext
   my_project/
   my_project/src/
   my_project/src/main.py
-  my_project/tests/
-  my_project/tests/test_main.py
+  my_project/.env
+  my_project/.git/
+  my_project/.git/config
   ```
 
 ## Example Output
@@ -63,8 +68,9 @@ Given the `project_structure.txt` file, the script will create the following str
 my_project/
 ├── src/
 │   └── main.py
-└── tests/
-    └── test_main.py
+├── .env
+├── .git/
+│   └── config
 ```
 
 ## Contributing
@@ -79,4 +85,6 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 4. Push to the branch: `git push origin feature-name`.
 5. Open a pull request.
 
+## License
 
+Not yet added
